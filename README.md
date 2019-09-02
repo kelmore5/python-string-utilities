@@ -40,3 +40,7 @@ Once installed, you can import the main class like so:
     .
     .
     .
+
+# Documentation
+
+To be updated
