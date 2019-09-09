@@ -7,9 +7,8 @@ contain the root `toctree` directive. -->
 
 #### class kelmore_strings.strings.StringSize()
 A Python helper class used in `StringTools`
-
-    containing functions that relate to string sizes, including finding the largest word and
-    counting the substrings within a string
+that contains functions that relate to string sizes, including finding the largest word and
+counting the substrings within a string
 
 Usage:
 

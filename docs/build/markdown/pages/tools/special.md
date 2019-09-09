@@ -7,9 +7,8 @@ contain the root `toctree` directive. -->
 
 #### class kelmore_strings.strings.StringSpecials()
 A Python helper class used in `StringTools`
-
-    that holds all extraneous utility functions for strings in Python. Right now, the only
-    function is finding the last character within a string
+that holds all extraneous utility functions for strings in Python. Right now, the only
+function is finding the last character within a string
 
 Usage:
 

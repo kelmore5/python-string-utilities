@@ -9,7 +9,7 @@ contain the root `toctree` directive. -->
 A Python class to hold various utility tools to help deal with strings in Python
 
 There’s five sections to StringTools: Art, Check, Convert, Size, and Special. Each helper
-class contains their own tools for strings. In order,
+class contains their own tools for strings. In order, they are:
 
 `Art`
 

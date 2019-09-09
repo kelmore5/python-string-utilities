@@ -7,9 +7,8 @@ contain the root `toctree` directive. -->
 
 #### class kelmore_strings.strings.StringArt()
 A Python helper class used in `StringTools`
-
-    that contains functions related to ascii art. Right now, the only functions include
-    printing out a triangle to the console.
+that contains functions related to ascii art. Right now, the only functions include
+printing out a triangle to the console.
 
 Usage:
 

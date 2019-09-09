@@ -64,7 +64,19 @@ Once installed, you can import the main class like so:
 
 ## Documentation
 
-To be updated
+* [Main](docs/build/markdown/index.md)
+
+* [StringTools](docs/build/markdown/pages/strings.md)
+
+* [StringArt](docs/build/markdown/pages/tools/art.md)
+
+* [StringCheck](docs/build/markdown/pages/tools/check.md)
+
+* [StringConvert](docs/build/markdown/pages/tools/convert.md)
+
+* [StringSize](docs/build/markdown/pages/tools/size.md)
+
+* [StringSpecials](docs/build/markdown/pages/tools/special.md)
 
 <!-- kelmore__utils documentation master file, created by
 sphinx-quickstart on Sun Sep  1 18:49:11 2019.
@@ -77,7 +89,7 @@ contain the root `toctree` directive. -->
 A Python class to hold various utility tools to help deal with strings in Python
 
 There’s five sections to StringTools: Art, Check, Convert, Size, and Special. Each helper
-class contains their own tools for strings. In order,
+class contains their own tools for strings. In order, they are:
 
 `Art`
 
@@ -159,9 +171,8 @@ contain the root `toctree` directive. -->
 
 #### class kelmore_strings.strings.StringArt()
 A Python helper class used in `StringTools`
-
-    that contains functions related to ascii art. Right now, the only functions include
-    printing out a triangle to the console.
+that contains functions related to ascii art. Right now, the only functions include
+printing out a triangle to the console.
 
 Usage:
 
@@ -255,9 +266,8 @@ contain the root `toctree` directive. -->
 
 #### class kelmore_strings.strings.StringCheck()
 A Python helper class used in `StringTools`
-
-    containing functions to perform various checks on strings, like if a string has any
-    upper or lowercase letters.
+that contains functions to perform various checks on strings, like if a string has any
+upper or lowercase letters.
 
 Usage:
 
@@ -560,9 +570,8 @@ contain the root `toctree` directive. -->
 
 #### class kelmore_strings.strings.StringConvert()
 A Python helper class used in `StringTools`
-
-    containing functions to help with conversions of strings, like getting only the ascii
-    characters, taking out all whitespace, or removing all vowels.
+that contains functions to help with conversions of strings, like getting only the ascii
+characters, taking out all whitespace, or removing all vowels.
 
 Usage:
 
@@ -1044,9 +1053,8 @@ contain the root `toctree` directive. -->
 
 #### class kelmore_strings.strings.StringSize()
 A Python helper class used in `StringTools`
-
-    containing functions that relate to string sizes, including finding the largest word and
-    counting the substrings within a string
+that contains functions that relate to string sizes, including finding the largest word and
+counting the substrings within a string
 
 Usage:
 
@@ -1169,9 +1177,8 @@ contain the root `toctree` directive. -->
 
 #### class kelmore_strings.strings.StringSpecials()
 A Python helper class used in `StringTools`
-
-    that holds all extraneous utility functions for strings in Python. Right now, the only
-    function is finding the last character within a string
+that holds all extraneous utility functions for strings in Python. Right now, the only
+function is finding the last character within a string
 
 Usage:
 

@@ -7,9 +7,8 @@ contain the root `toctree` directive. -->
 
 #### class kelmore_strings.strings.StringConvert()
 A Python helper class used in `StringTools`
-
-    containing functions to help with conversions of strings, like getting only the ascii
-    characters, taking out all whitespace, or removing all vowels.
+that contains functions to help with conversions of strings, like getting only the ascii
+characters, taking out all whitespace, or removing all vowels.
 
 Usage:
 

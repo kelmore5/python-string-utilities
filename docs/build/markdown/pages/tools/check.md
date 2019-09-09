@@ -7,9 +7,8 @@ contain the root `toctree` directive. -->
 
 #### class kelmore_strings.strings.StringCheck()
 A Python helper class used in `StringTools`
-
-    containing functions to perform various checks on strings, like if a string has any
-    upper or lowercase letters.
+that contains functions to perform various checks on strings, like if a string has any
+upper or lowercase letters.
 
 Usage:
 
