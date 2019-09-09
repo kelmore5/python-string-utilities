@@ -24,7 +24,7 @@ Usage:
 >>> Strings.size.largest_word_size(x)
 4
 'question'
-9
+8
 ```
 
 
