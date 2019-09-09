@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>StringSize &#8212; StringTools 1.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="StringSpecials" href="special.html" />
+    <link rel="prev" title="StringConvert" href="convert.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="special.html" title="StringSpecials"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="convert.html" title="StringConvert"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">StringTools 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="stringsize">
+<h1>StringSize<a class="headerlink" href="#stringsize" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">kelmore_strings.strings.</code><code class="sig-name descname">StringSize</code></dt>
+<dd><dl class="simple">
+<dt>A Python helper class used in <code class="xref py py-class docutils literal notranslate"><span class="pre">StringTools</span></code></dt><dd><p>containing functions that relate to string sizes, including finding the largest word and
+counting the substrings within a string</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">kelmore_strings</span> <span class="k">import</span> <span class="n">StringTools</span> <span class="k">as</span> <span class="n">Strings</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;How many times do I, will I, can I, say...I?&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;What&#39;s the longest word within this question?&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">z</span> <span class="o">=</span> <span class="s2">&quot;What&#39;s the size of the longest word within this question?&quot;</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Strings</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">count_substring</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Strings</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">largest_word</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Strings</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">largest_word_size</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="go">4</span>
+<span class="go">&#39;question&#39;</span>
+<span class="go">9</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">count_substring</code><span class="sig-paren">(</span><em class="sig-param">string: str</em>, <em class="sig-param">search: str</em><span class="sig-paren">)</span> &#x2192; int</dt>
+<dd><p>Counts all the instances of search within the given string</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;How many times do I, will I, can I, say...I?&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">StringTools</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">count_substring</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">)</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>string</strong> (<em>str</em>) – Any string</p></li>
+<li><p><strong>search</strong> (<em>str</em>) – The string to search for within string</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The number of times the search appears within the given string</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">largest_word</code><span class="sig-paren">(</span><em class="sig-param">string: str</em><span class="sig-paren">)</span> &#x2192; str</dt>
+<dd><p>Finds the largest word within a given string. This will only check against word
+characters, so things like commas, apostrophes, and question marks are ignored.</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;What&#39;s the longest word within this question?&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">StringTools</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">largest_word</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="go">&#39;question&#39;</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>string</strong> (<em>str</em>) – Any string</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The largest word within the given string</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">largest_word_size</code><span class="sig-paren">(</span><em class="sig-param">string: str</em><span class="sig-paren">)</span> &#x2192; int</dt>
+<dd><p>Finds the size of the largest word within a given string.  This will only check
+against word characters, so things like commas, apostrophes, and question marks are
+ignored.</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;What&#39;s the size of the longest word within this question?&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">StringTools</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">largest_word_size</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="go">8</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>string</strong> (<em>str</em>) – Any string</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The length of the largest word within the given string</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="convert.html"
+                        title="previous chapter">StringConvert</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="special.html"
+                        title="next chapter">StringSpecials</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/pages/tools/size.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="special.html" title="StringSpecials"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="convert.html" title="StringConvert"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">StringTools 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Kyle Elmore.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,481 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>StringConvert &#8212; StringTools 1.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="StringSize" href="size.html" />
+    <link rel="prev" title="StringCheck" href="check.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="size.html" title="StringSize"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="check.html" title="StringCheck"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">StringTools 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="stringconvert">
+<h1>StringConvert<a class="headerlink" href="#stringconvert" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">kelmore_strings.strings.</code><code class="sig-name descname">StringConvert</code></dt>
+<dd><dl class="simple">
+<dt>A Python helper class used in <code class="xref py py-class docutils literal notranslate"><span class="pre">StringTools</span></code></dt><dd><p>containing functions to help with conversions of strings, like getting only the ascii
+characters, taking out all whitespace, or removing all vowels.</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">kelmore_strings</span> <span class="k">import</span> <span class="n">StringTools</span> <span class="k">as</span> <span class="n">Strings</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Please take out my vowels!&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;I only want my money, $19.99&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">z</span> <span class="o">=</span> <span class="s2">&quot;     There&#39;s too many      spaces.   &quot;</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Strings</span><span class="o">.</span><span class="n">convert</span><span class="o">.</span><span class="n">consonants</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Strings</span><span class="o">.</span><span class="n">convert</span><span class="o">.</span><span class="n">only_numeric</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">keep_decimal_point</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Strings</span><span class="o">.</span><span class="n">convert</span><span class="o">.</span><span class="n">replace_whitespace</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">replacement</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="go">&#39;Plstktmvwls&#39;</span>
+<span class="go">&#39;19.99&#39;</span>
+<span class="go">&quot;There&#39;s too many spaces.&quot;</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">consonants</code><span class="sig-paren">(</span><em class="sig-param">string: str</em><span class="sig-paren">)</span> &#x2192; str</dt>
+<dd><p>Takes a string and returns all the consonants inside of it without vowels</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Please take out my vowels!&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">StringTools</span><span class="o">.</span><span class="n">convert</span><span class="o">.</span><span class="n">consonants</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="go">&#39;Plstktmvwls&#39;</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>string</strong> (<em>str</em>) – Any string</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The given string with only consonants</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">normalize</code><span class="sig-paren">(</span><em class="sig-param">string: str</em><span class="sig-paren">)</span> &#x2192; str</dt>
+<dd><p>Takes a string and returns it in all lowercase with its spaces replaced with
+underscores. Mostly used for dictionaries and database fields</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">StringTools</span><span class="o">.</span><span class="n">convert</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="s1">&#39;Some Database Field&#39;</span><span class="p">)</span>
+<span class="go">&#39;some_database_field&#39;</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>string</strong> (<em>str</em>) – Any string</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The given string with spaces replaced with underscores and changed to lowercase</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">only_alphabetical</code><span class="sig-paren">(</span><em class="sig-param">string: str</em>, <em class="sig-param">plus_space: Optional[bool] = False</em><span class="sig-paren">)</span> &#x2192; str</dt>
+<dd><dl class="simple">
+<dt>Takes a string and removes all characters except alphabetical ones.</dt><dd><p>The returned string will only have A-Z, a-z, and optionally, spaces ( ).</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;There&#39;s too many numbers here 4594102&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">StringTools</span><span class="o">.</span><span class="n">convert</span><span class="o">.</span><span class="n">only_alphabetical</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">plus_space</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">&#39;Theres too many numbers here &#39;</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>string</strong> (<em>str</em>) – Any string</p></li>
+<li><p><strong>plus_space</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) – True if the output should include spaces else False</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The given string with all non-alphabetical characters removed</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">only_ascii</code><span class="sig-paren">(</span><em class="sig-param">string: str</em><span class="sig-paren">)</span> &#x2192; str</dt>
+<dd><p>Takes a string and removes all non-ascii characters from it</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;Ϊ cȃήʹΤ put this in Excel!&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">StringTools</span><span class="o">.</span><span class="n">convert</span><span class="o">.</span><span class="n">only_ascii</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="go">&#39; put this in Excel!&#39;</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>string</strong> – Any string</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The given string stripped of all non-ascii characters</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>string: str</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">only_numeric</code><span class="sig-paren">(</span><em class="sig-param">string: str</em>, <em class="sig-param">keep_decimal_point: Optional[bool] = False</em><span class="sig-paren">)</span> &#x2192; str</dt>
+<dd><p>Takes a string and removes all characters except numerical ones. You can
+optionally include the decimal point as well.</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;I only want my money, $19.99&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">StringTools</span><span class="o">.</span><span class="n">convert</span><span class="o">.</span><span class="n">only_numeric</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">keep_decimal_point</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">&#39;19.99&#39;</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>string</strong> (<em>str</em>) – Any string</p></li>
+<li><p><strong>keep_decimal_point</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) – True if the output string should have decimal points else False</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The given string with all characters stripped except numerical ones</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">only_word_characters</code><span class="sig-paren">(</span><em class="sig-param">string: str</em>, <em class="sig-param">include_space: Optional[bool] = False</em>, <em class="sig-param">include_underscore: Optional[bool] = True</em><span class="sig-paren">)</span> &#x2192; str</dt>
+<dd><p>Takes a string and returns it with only word characters. Word characters are
+A-Z, a-z, 0-9, and underscore (_). In other words, this function removes things like
+commas (,), apostrophes (‘), periods (.), etc from a string.</p>
+<p>You can optionally choose to include spaces and remove underscores, if desired</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;I don&#39;t want all these characters!&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">StringTools</span><span class="o">.</span><span class="n">convert</span><span class="o">.</span><span class="n">only_word_characters</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">include_space</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">&#39;I dont want all these characters&#39;</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>string</strong> (<em>str</em>) – Any string</p></li>
+<li><p><strong>include_space</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) – True if output should include spaces ( ) else False</p></li>
+<li><p><strong>include_underscore</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) – True if output should include underscore (_) else False</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The given string with all non-word characters removed</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">regularize</code><span class="sig-paren">(</span><em class="sig-param">string: str</em><span class="sig-paren">)</span> &#x2192; str</dt>
+<dd><p>Takes a string in all lowercase and separated by underscores and returns the string
+with spaces, titled. This is mostly used to “undo” dictionary keys and database fields.</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;some_database_field&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">StringTools</span><span class="o">.</span><span class="n">convert</span><span class="o">.</span><span class="n">regularize</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="go">&#39;Some Database Field&#39;</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>string</strong> (<em>str</em>) – A lowercase string separated by underscores</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The string with its underscores replaced by spaces and titled</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">remove_whitespace</code><span class="sig-paren">(</span><em class="sig-param">string: str</em><span class="sig-paren">)</span> &#x2192; str</dt>
+<dd><p>Removes all whitespace from a string</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;I hate whitespace.&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">StringTools</span><span class="o">.</span><span class="n">convert</span><span class="o">.</span><span class="n">remove_whitespace</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="go">&#39;Ihatewhitespace.&#39;</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>string</strong> (<em>str</em>) – Any string</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The string without any whitespace</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">replace_non_ascii</code><span class="sig-paren">(</span><em class="sig-param">string: str</em>, <em class="sig-param">replacement: str = ' '</em>, <em class="sig-param">with_space: Optional[bool] = True</em><span class="sig-paren">)</span> &#x2192; str</dt>
+<dd><p>Similar to <code class="xref py py-func docutils literal notranslate"><span class="pre">only_ascii</span></code>,
+takes a string and replaces all non-ascii characters with a given replacement string.
+You can optionally include or remove spaces as well.</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;Thϝs doesn&#39;t lϼϼk rϝght&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">StringTools</span><span class="o">.</span><span class="n">convert</span><span class="o">.</span><span class="n">replace_non_ascii</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">replacement</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="n">with_space</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">&quot;Th|s doesn&#39;t l||k r|ght&#39;</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>string</strong> (<em>str</em>) – Any string</p></li>
+<li><p><strong>replacement</strong> (<em>str</em>) – A string to replace non-ascii characters with</p></li>
+<li><p><strong>with_space</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) – True if the output string should include spaces ( ) else False</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The given string with all non-ascii characters replaced with replacement</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">replace_null</code><span class="sig-paren">(</span><em class="sig-param">string: Optional[str]</em><span class="sig-paren">)</span> &#x2192; str</dt>
+<dd><p>Takes a string or None and returns a string. Used to force the None type into a string
+when the type of a string is unknown.</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">StringTools</span><span class="o">.</span><span class="n">convert</span><span class="o">.</span><span class="n">replace_null</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+<span class="go">&#39;&#39;</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>string</strong> (<em>str</em>) – Any string or None</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The given string or ‘’ if the string is None</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">replace_whitespace</code><span class="sig-paren">(</span><em class="sig-param">string: str</em>, <em class="sig-param">replacement: str = ' '</em><span class="sig-paren">)</span> &#x2192; str</dt>
+<dd><p>Similar to <code class="xref py py-func docutils literal notranslate"><span class="pre">only_ascii</span></code>,
+replaces any whitespace within a given string with a replacement one. This is helpful
+when you have a string with a variable number of spaces within it.</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;     There&#39;s too many      spaces.   &quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">StringTools</span><span class="o">.</span><span class="n">convert</span><span class="o">.</span><span class="n">replace_whitespace</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">replacement</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="go">&quot;There&#39;s too many spaces.&quot;</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>string</strong> (<em>str</em>) – Any string with extraneous whitespace</p></li>
+<li><p><strong>replacement</strong> (<em>str</em>) – The string to replace any whitespace with</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The given string with all whitespace replaced with replacement</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">strip_or_none</code><span class="sig-paren">(</span><em class="sig-param">string: Optional[str]</em><span class="sig-paren">)</span> &#x2192; Optional[str]</dt>
+<dd><p>Takes in a string or None and returns None if the given string is None. Otherwise,
+it returns the string with it’s extraneous whitespace stripped.</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">StringTools</span><span class="o">.</span><span class="n">convert</span><span class="o">.</span><span class="n">strip_or_none</span><span class="p">(</span><span class="s1">&#39;  Get rid of whitespace please  &#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">StringTools</span><span class="o">.</span><span class="n">convert</span><span class="o">.</span><span class="n">strip_or_none</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+<span class="go">&#39;Get rid of whitespace please&#39;</span>
+<span class="go">None</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>string</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – Any string or None</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The given string, stripped, or None if the string is None</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Optional[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">unique</code><span class="sig-paren">(</span><em class="sig-param">string: str</em><span class="sig-paren">)</span> &#x2192; str</dt>
+<dd><p>Takes a string and returns all the unique characters within it.</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;I need uniqueness!&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">StringTools</span><span class="o">.</span><span class="n">convert</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="go">&#39;I neduiqs!&#39;</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>string</strong> (<em>str</em>) – Any string</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The given string with only its unique character set</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">vowels</code><span class="sig-paren">(</span><em class="sig-param">string: str</em><span class="sig-paren">)</span> &#x2192; str</dt>
+<dd><p>Takes a string and returns all the vowels inside of it</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Please take out my consonants!&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">StringTools</span><span class="o">.</span><span class="n">convert</span><span class="o">.</span><span class="n">vowels</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="go">&#39;eaeaeouyooa&#39;</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>string</strong> (<em>str</em>) – Any string</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The given string with only vowels</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="check.html"
+                        title="previous chapter">StringCheck</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="size.html"
+                        title="next chapter">StringSize</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/pages/tools/convert.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="size.html" title="StringSize"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="check.html" title="StringCheck"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">StringTools 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Kyle Elmore.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
+    </div>
+  </body>
+</html>

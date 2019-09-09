@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>StringTools &#8212; StringTools 1.0 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="StringArt" href="tools/art.html" />
+    <link rel="prev" title="kelmore_strings" href="../index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="tools/art.html" title="StringArt"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="kelmore_strings"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">StringTools 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="stringtools">
+<h1>StringTools<a class="headerlink" href="#stringtools" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">kelmore_strings.strings.</code><code class="sig-name descname">StringTools</code></dt>
+<dd><p>A Python class to hold various utility tools to help deal with strings in Python</p>
+<p>There’s five sections to StringTools: Art, Check, Convert, Size, and Special. Each helper
+class contains their own tools for strings. In order,</p>
+<dl class="simple">
+<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">Art</span></code></dt><dd><p>Contains functions to create ascii art</p>
+</dd>
+<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">Check</span></code></dt><dd><p>Contains function to perform checks on strings, like seeing if a string only contains
+upper or lowercase letters</p>
+</dd>
+<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">Convert</span></code></dt><dd><p>Contains functions to convert strings. For example, removing all non-ascii characters,
+removing all whitespace, or finding all the unique characters within a string</p>
+</dd>
+<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">Size</span></code></dt><dd><p>Contains functions to determine different things relating to a string’s size, like finding
+the largest word or counting the number of substrings within a string</p>
+</dd>
+<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">Special</span></code></dt><dd><p>This class is for any extraneous function that doesn’t fit within the four other classes.
+Right now, the only function inside of it is one to get the last character of a string.</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">kelmore_strings</span> <span class="k">import</span> <span class="n">StringTools</span> <span class="k">as</span> <span class="n">Strings</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;AM I YELLING?!&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;I need this to be ascii!&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">z</span> <span class="o">=</span> <span class="s2">&quot;What&#39;s my largest word?&quot;</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Strings</span><span class="o">.</span><span class="n">check</span><span class="o">.</span><span class="n">has_uppercase</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Strings</span><span class="o">.</span><span class="n">convert</span><span class="o">.</span><span class="n">only_ascii</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Strings</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">largest_word</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="go">&#39;I need this to be ascii!&#39;</span>
+<span class="go">&#39;largest&#39;</span>
+</pre></div>
+</div>
+<dl class="attribute">
+<dt>
+<code class="sig-name descname">art</code></dt>
+<dd><p>Contains functions for ascii art</p>
+<p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">StringArt</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="sig-name descname">check</code></dt>
+<dd><p>Contains functions for performing checks on strings</p>
+<p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">StringCheck</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="sig-name descname">convert</code></dt>
+<dd><p>Contains functions for converting strings</p>
+<p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">StringConvert</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="sig-name descname">size</code></dt>
+<dd><p>Contains functions related to string size</p>
+<p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">StringSize</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="sig-name descname">special</code></dt>
+<dd><p>Contains extraneous string utility functions</p>
+<p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">StringSpecials</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../index.html"
+                        title="previous chapter">kelmore_strings</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="tools/art.html"
+                        title="next chapter">StringArt</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/pages/strings.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="tools/art.html" title="StringArt"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="kelmore_strings"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">StringTools 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Kyle Elmore.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
+    </div>
+  </body>
+</html>
